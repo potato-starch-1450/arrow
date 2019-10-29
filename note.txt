@@ -1,0 +1,1 @@
+find . | grep '\.xml' | xargs -I@ file @ | grep -v ASCII | cut -d':' -f1 | xargs -I@ axmldec @ -o @
