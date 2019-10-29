@@ -1,1 +1,2 @@
 find . | grep '\.xml' | xargs -I@ file @ | grep -v ASCII | cut -d':' -f1 | xargs -I@ axmldec @ -o @
+git filter-branch -f --env-filter 'export GIT_AUTHOR_DATE=`echo $GIT_AUTHOR_DATE | sed s/+0800/+1450/`'
